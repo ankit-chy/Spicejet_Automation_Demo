@@ -21,15 +21,13 @@ public class TestBase {
 		prop.load(fis);					 	// accepts input stream file  ----> Now the prop has knowledge about properties file and all the content of it
 		
 		String url = prop.getProperty("DemoURL");
-		String browser_properties = prop.getProperty("browser");	
-		String browser_maven = System.getProperty("browser");
-		
-		String browser = browser_maven!= null ? browser_maven : browser_properties;
-		
+		String browser = prop.getProperty("browser");	
+
 		if(driver == null) 
 		{	
 			if(browser.equalsIgnoreCase("chrome"))
 			{	
+				//Selenium 4 update no need to set chrome driver path, automatically selects drivers based on browser version
 				//System.setProperty("webdriver.chrome.driver" , System.getProperty("user.dir")+"\\src\\test\\resources\\chromedriver.exe");
 				driver = new ChromeDriver();  // driver gets the life
 				

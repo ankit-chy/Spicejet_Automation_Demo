@@ -26,9 +26,13 @@ public class Hooks {
 		WebDriver driver = testContextSetup.testBase.WebDriverManager();
 		if(scenario.isFailed())
 		{
-		  File sourcePath = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		  byte[] fileContent = FileUtils.readFileToByteArray(sourcePath);
-		  scenario.attach(fileContent, "image/png", "failureSS");
+			System.out.println("Test Failed, Hence No ScreenShot Captured");
+			
+		}else {
+			
+			  File sourcePath = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+			  byte[] fileContent = FileUtils.readFileToByteArray(sourcePath);
+			  scenario.attach(fileContent, "image/png", "Passed");
 		}
 	}
 	

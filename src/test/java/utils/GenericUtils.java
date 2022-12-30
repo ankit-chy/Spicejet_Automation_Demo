@@ -1,6 +1,9 @@
 package utils;
 
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.Iterator;
+import java.util.Properties;
 import java.util.Set;
 
 import org.openqa.selenium.WebDriver;
@@ -21,8 +24,6 @@ public class GenericUtils {
 		String childWindow = i1.next();					     // Storing child window index
 		
 		driver.switchTo().window(childWindow);			  // Switched to child window
-		
-		
 	}
-
+	
 }
