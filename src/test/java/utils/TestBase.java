@@ -36,7 +36,7 @@ public class TestBase {
 				System.setProperty("webdriver.edge.driver" , System.getProperty("user.dir")+"\\src\\test\\resources\\msedge.exe");
 				driver = new EdgeDriver();
 			}
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		//	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 			driver.get(url);
 		}
 		return driver;

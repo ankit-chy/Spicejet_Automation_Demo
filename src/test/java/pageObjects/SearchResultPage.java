@@ -17,7 +17,7 @@ public class SearchResultPage {
 	
 	public void checkPrice() {
 		
-		System.out.println("Lowest Price Shown On Page Is: "+driver.findElement(lowestPrice).getText());
+		System.out.println("Lowest Price Shown On Page Is: " + driver.findElement(lowestPrice).getText());
 	
 	}
 	

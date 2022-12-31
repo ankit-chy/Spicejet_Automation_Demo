@@ -1,9 +1,13 @@
 package pageObjects;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LandingPage {
 	public WebDriver driver;
@@ -11,22 +15,14 @@ public class LandingPage {
 		this.driver = driver;
 	}
 	
-//	By loginBtn = By.xpath("//div[contains(text(),'Login')]");
-//	By contactNoField = By.xpath("//input[@type='number']");
-//	By passWordField = By.xpath("//input[@type='password']");
-//
-//	// Have to update x path for Login_btn2 
-//	By loginBtn2 = By.xpath("//div[@class='css-1dbjc4n r-1awozwy r-184aecr r-z2wwpe r-1loqt21 r-18u37iz r-tmtnm0 r-1777fci r-1x0uki6 r-1w50u8q r-ah5dr5 r-1otgn73']");
-//	By locn = By.xpath("//div[@data-testid='to-testID-origin']");
-//	
-////	By from1 = By.xpath("//div[@class='css-1dbjc4n r-19yat4t r-1rt2jqs'] //div[contains(text(),'Delhi')]");
-////	By from2 = By.xpath("//div[@class='css-1dbjc4n r-19yat4t r-1rt2jqs'] //div[contains(text(),'Bengaluru')]");
-//	By to = By.xpath("//div[@data-testid='to-testID-destination']//div[@class='css-1dbjc4n r-14lw9ot r-11u4nky r-z2wwpe r-1phboty r-rs99b7 r-1loqt21 r-13awgt0 r-ymttw5 r-tju18j r-5njf8e r-1otgn73']");
-////  By toSending = By.xpath("//input[@value='Mumbai (BOM)']");
-//																 
-//	By calendar = By.id("//div[normalize-space()='Departure Date']");
-//	By date = By.xpath("(//div[@data-focusable='true'])[75]");
-
+		By loginBtn = By.xpath("//div[contains(text(),'Login')]");
+		By contactNoField = By.xpath("//input[@type='number']");
+		By passWordField = By.xpath("//input[@type='password']");
+		By loginBtn2 = By.xpath("//div[@class='css-1dbjc4n r-1awozwy r-184aecr r-z2wwpe r-1loqt21 r-18u37iz r-tmtnm0 r-1777fci r-1x0uki6 r-1w50u8q r-ah5dr5 r-1otgn73']");
+		
+//		By from = By.xpath("//div[@data-testid='to-testID-origin']");
+//		By from = By.xpath("//input[@value='Delhi (DEL)']");
+		
 	
 	public String getTitleLandingPage()
 	{
@@ -36,19 +32,25 @@ public class LandingPage {
 	
 	public void logIn(String contactNo,String passWord) {
 		
-//		driver.findElement(loginBtn).click();
-//		driver.findElement(contactNoField).sendKeys(contactNo);
-//		driver.findElement(passWordField).sendKeys(passWord);
-//		driver.findElement(loginBtn2).click();
+		driver.findElement(loginBtn).click();
+		driver.findElement(contactNoField).sendKeys(contactNo);
+		driver.findElement(passWordField).sendKeys(passWord);
+		driver.findElement(loginBtn2).click();
 		System.out.println("Logged In Successfully");
 	}
 	
 	public void selectingDesiredLocation() throws InterruptedException {
 		
-//		System.out.println("Clicking on From");
+		System.out.println("Clicking on From");
 		
-//		driver.findElement(locn).clear();
-//		driver.findElement(locn).sendKeys("DBR");
+		WebElement from = driver.findElement(By.xpath("//input[@value='Delhi (DEL)']"));
+		Actions actions = new Actions(driver);
+		actions.moveToElement(from).click().build().perform();
+		
+//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//		wait.until(ExpectedConditions.elementToBeClickable(from)).click();
+		
+	//	driver.findElement(from).sendKeys("DBR");
 		
 		
 //		driver.findElement(from1).click();

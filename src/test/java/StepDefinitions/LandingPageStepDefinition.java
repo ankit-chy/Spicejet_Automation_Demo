@@ -40,7 +40,6 @@ public LandingPageStepDefinition(TestContextSetUp testContextSetup) {
 		public void user_is_on_spicejet_landing_page() {
 			
 			Assert.assertTrue(landingPage.getTitleLandingPage().contains("SpiceJet"));
-		    System.out.println("Landing Page Title is : " + landingPage.getTitleLandingPage());
 		    
 		}
 		
@@ -48,14 +47,12 @@ public LandingPageStepDefinition(TestContextSetUp testContextSetup) {
 		public void user_logs_in_with_credentials() throws IOException {
 			
 		     landingPage.logIn(Creds.getContactNo(), Creds.getPassWord());
-		     System.out.println("Logged In Successfully");
 		  
 		}
 		
 		@When("User searches for desired location flights")
 		public void user_searches_for_desired_location_flights() throws InterruptedException {
 		     landingPage.selectingDesiredLocation();
-		     System.out.println("Executed Selection of Location Successfully");
 		     landingPage.selectingDate();
 		     landingPage.searchingFlights();
 		     

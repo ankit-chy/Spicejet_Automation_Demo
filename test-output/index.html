@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Arise\AppData\Local\Temp\testng-eclipse-228884203\testng-customsuite.xml</span>
+                    <span>C:\Users\Arise\AppData\Local\Temp\testng-eclipse--1918058840\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -130,32 +130,9 @@
                   </a> <!-- runScenario("Browsing experience of a user", "Login and selecting a flight") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("Browsing experience of a user","Login and selecting a flight")</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#\(\/\/div\[\@data\-focusable\=\&apos;true\&apos;\]\)\[17\]&quot;}
-  (Session info: chrome=108.0.5359.125)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: &apos;4.7.2&apos;, revision: &apos;4d4020c3b7&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [882d657ca98755ce712fb99d748b4f54, findElement {using=id, value=(//div[@data-focusable=&apos;true&apos;])[17]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\Arise\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58681}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58681/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 882d657ca98755ce712fb99d748b4f54
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:343)
-	at pageObjects.LandingPage.selectingDate(LandingPage.java:65)
-	at StepDefinitions.LandingPageStepDefinition.user_searches_for_desired_location_flights(LandingPageStepDefinition.java:58)
-	at ✽.User searches for desired location flights(file:///C:/Users/Arise/eclipse-workspace/Spicejet_Demo/src/test/java/features/searchFlight.feature:7)
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;pageObjects.SearchResultPage.checkPrice()&quot; because &quot;this.searchResultPage&quot; is null
+	at StepDefinitions.SearchResultPageSetpDef.user_checks_the_flight_price(SearchResultPageSetpDef.java:37)
+	at ✽.User Checks the flight price(file:///C:/Users/Arise/eclipse-workspace/Spicejet_Demo/src/test/java/features/searchFlight.feature:8)
 
 </div> <!-- stack-trace -->
                   <em>
@@ -167,7 +144,7 @@ Session ID: 882d657ca98755ce712fb99d748b4f54
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Arise\AppData\Local\Temp\testng-eclipse-228884203\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Arise\AppData\Local\Temp\testng-eclipse--1918058840\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -228,12 +205,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'cucumberOptions.TestNGRunner')
-data.setCell(0, 3, 23695);
+data.setCell(0, 3, 65663);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 23 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -268,11 +245,11 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">runScenario("Browsing experience of a user", "Login and selecting a flight")</span>
-                <span class="method-start">1665 ms</span>
+                <span class="method-start">2167 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">25373 ms</span>
+                <span class="method-start">67910 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
