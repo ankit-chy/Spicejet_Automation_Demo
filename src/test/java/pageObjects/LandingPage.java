@@ -3,6 +3,7 @@ package pageObjects;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -24,6 +25,13 @@ public class LandingPage {
 //		By from2 = By.xpath("//div[@data-testid='to-testID-origin']//input[@type='text']);
 		By to = By.xpath("//div[contains(text(),'To')]");
 		By to2 = By.cssSelector("div[data-testid='to-testID-destination'] input[type='text']");
+		
+//		By calendar = By.cssSelector("div[data-testid=\"undefined-calendar-picker\"]");
+		
+//		By date = By.xpath("//*[@id=\"main-container\"]/div/div[1]/div[3]/div[2]/div[4]/div/div[2]/div[2]/div[3]/div[2]/div/div[2]/div/div[3]/div[2]/div[6]/div/div");
+		By cross = By.xpath("(//div[@data-focusable='true'])[21]");
+//		By searchBtn = By.xpath("//div[contains(text(),'Search Flight')]");
+		By searchBtn = By.xpath("(//div[@data-focusable='true'])[28]");
 		
 		
 		
@@ -69,10 +77,13 @@ public class LandingPage {
 	
 	public void selectingDate() {
 		System.out.println("Selecting Date");
-//		driver.findElement();
-	}
+//		driver.findElement(date).click();
+		driver.findElement(cross).click();
+		System.out.println("Selected Date");
+		}
 	
 	public void searchingFlights() {
 		System.out.println("clicking on search flights");
+		driver.findElement(searchBtn).click();
 	}
 }

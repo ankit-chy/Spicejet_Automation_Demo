@@ -53,8 +53,8 @@ public LandingPageStepDefinition(TestContextSetUp testContextSetup) {
 		@When("User searches for desired location flights")
 		public void user_searches_for_desired_location_flights() throws InterruptedException, IOException {
 		     landingPage.selectingDesiredLocation(Creds.getFromCity(), Creds.getToCity());
-//		     landingPage.selectingDate();
-//		     landingPage.searchingFlights();
+		     landingPage.selectingDate();
+		     landingPage.searchingFlights();
 		     
 		}
 	

@@ -28,6 +28,7 @@ SearchResultPage searchResultPage;
 
 public SearchResultPageSetpDef(TestContextSetUp testContextSetup) {
 	this.testContextSetup=testContextSetup;
+	this.searchResultPage=testContextSetup.pageObjectManager.getSearchResultPage();
 }
 
 

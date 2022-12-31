@@ -2,15 +2,15 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-12-31T21:18:19 IST" name="Default suite" finished-at="2022-12-31T21:19:16 IST" duration-ms="56462">
+  <suite started-at="2023-01-01T00:25:13 IST" name="Default suite" finished-at="2023-01-01T00:26:20 IST" duration-ms="67452">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberOptions.TestNGRunner@4c402120]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2022-12-31T21:18:19 IST" name="Default test" finished-at="2022-12-31T21:19:16 IST" duration-ms="56462">
+    <test started-at="2023-01-01T00:25:13 IST" name="Default test" finished-at="2023-01-01T00:26:20 IST" duration-ms="67452">
       <class name="cucumberOptions.TestNGRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:cucumberOptions.TestNGRunner@4c402120]" started-at="2022-12-31T21:18:19 IST" name="setUpClass" finished-at="2022-12-31T21:18:20 IST" duration-ms="791" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:cucumberOptions.TestNGRunner@4c402120]" started-at="2023-01-01T00:25:13 IST" name="setUpClass" finished-at="2023-01-01T00:25:14 IST" duration-ms="481" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -21,7 +21,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberOptions.TestNGRunner@4c402120]" started-at="2022-12-31T21:18:20 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-31T21:19:16 IST" duration-ms="55524" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberOptions.TestNGRunner@4c402120]" started-at="2023-01-01T00:25:14 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-01-01T00:26:20 IST" duration-ms="66653" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -34,21 +34,50 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.NullPointerException">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
             <message>
-              <![CDATA[Cannot invoke "pageObjects.SearchResultPage.checkPrice()" because "this.searchResultPage" is null]]>
+              <![CDATA[element click intercepted: Element <div class="css-1dbjc4n r-1jkjb">...</div> is not clickable at point (1207, 30). Other element would receive the click: <div class="css-1dbjc4n r-1awozwy r-1fdnko3 r-13awgt0 r-1777fci">...</div>
+  (Session info: chrome=108.0.5359.125)
+Build info: version: '4.7.2', revision: '4d4020c3b7'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [68ec18f55f8c2e08d7b55969abaf87a4, clickElement {id=c954419f-7cbd-4917-8a2e-d26e021f7991}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\Arise\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52468}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52468/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (68ec18f55f8c2e08d7b55969abaf87a4)] -> css selector: .css-1dbjc4n.r-1jkjb]
+Session ID: 68ec18f55f8c2e08d7b55969abaf87a4]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "pageObjects.SearchResultPage.checkPrice()" because "this.searchResultPage" is null
-at StepDefinitions.SearchResultPageSetpDef.user_checks_the_flight_price(SearchResultPageSetpDef.java:37)
-at ✽.User Checks the flight price(file:///C:/Users/Arise/eclipse-workspace/Spicejet_Demo/src/test/java/features/searchFlight.feature:8)
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <div class="css-1dbjc4n r-1jkjb">...</div> is not clickable at point (1207, 30). Other element would receive the click: <div class="css-1dbjc4n r-1awozwy r-1fdnko3 r-13awgt0 r-1777fci">...</div>
+  (Session info: chrome=108.0.5359.125)
+Build info: version: '4.7.2', revision: '4d4020c3b7'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [68ec18f55f8c2e08d7b55969abaf87a4, clickElement {id=c954419f-7cbd-4917-8a2e-d26e021f7991}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\Arise\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52468}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52468/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (68ec18f55f8c2e08d7b55969abaf87a4)] -> css selector: .css-1dbjc4n.r-1jkjb]
+Session ID: 68ec18f55f8c2e08d7b55969abaf87a4
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+at pageObjects.SearchResultPage.logOut(SearchResultPage.java:29)
+at StepDefinitions.SearchResultPageSetpDef.user_logs_out(SearchResultPageSetpDef.java:44)
+at ✽.User LogsOut(file:///C:/Users/Arise/eclipse-workspace/Spicejet_Demo/src/test/java/features/searchFlight.feature:9)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:cucumberOptions.TestNGRunner@4c402120]" started-at="2022-12-31T21:19:16 IST" name="tearDownClass" finished-at="2022-12-31T21:19:16 IST" duration-ms="16" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:cucumberOptions.TestNGRunner@4c402120]" started-at="2023-01-01T00:26:20 IST" name="tearDownClass" finished-at="2023-01-01T00:26:20 IST" duration-ms="129" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
