@@ -22,8 +22,6 @@ import utils.TestContextSetUp;
 public class LandingPageStepDefinition {
 	
 public WebDriver driver; 				 	// initialized the web-driver so it is now accessible throughout  the class
-public String landingPageProductName;   	//  initialized product name for global use
-public String offerPageProductName;	   		// initialized product name for global use
 TestContextSetUp testContextSetup;		   //Created variable/instance of test context setup from package utils 
 PageObjectManager pageObjectManager;	  //Created variable/instance of Page Object Manager from package page object manager
 LandingPage landingPage; 
@@ -55,9 +53,12 @@ public LandingPageStepDefinition(TestContextSetUp testContextSetup) {
 		}
 		
 		@When("User searches for desired location flights")
-		public void user_searches_for_desired_location_flights() {
+		public void user_searches_for_desired_location_flights() throws InterruptedException {
+		     landingPage.selectingDesiredLocation();
+		     System.out.println("Executed Selection of Location Successfully");
+		     landingPage.selectingDate();
+		     landingPage.searchingFlights();
 		     
-		  
 		}
 	
 }
