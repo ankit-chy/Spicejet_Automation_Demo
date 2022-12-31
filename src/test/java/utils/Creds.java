@@ -21,4 +21,11 @@ public class Creds {
 	public static String getPassWord() throws IOException {
 		return getProperties().getProperty("passWord");
 	}
+	
+	public static String getFromCity() throws IOException {
+		return getProperties().getProperty("fromCity");
+	}
+	public static String getToCity() throws IOException {
+		return getProperties().getProperty("toCity");
+	}
 }

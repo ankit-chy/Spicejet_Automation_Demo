@@ -19,9 +19,13 @@ public class LandingPage {
 		By contactNoField = By.xpath("//input[@type='number']");
 		By passWordField = By.xpath("//input[@type='password']");
 		By loginBtn2 = By.xpath("//div[@class='css-1dbjc4n r-1awozwy r-184aecr r-z2wwpe r-1loqt21 r-18u37iz r-tmtnm0 r-1777fci r-1x0uki6 r-1w50u8q r-ah5dr5 r-1otgn73']");
+		By from = By.xpath("//div[contains(text(),'From')]");
+		By from2 = By.cssSelector("div[data-testid='to-testID-origin'] input[type='text']");
+//		By from2 = By.xpath("//div[@data-testid='to-testID-origin']//input[@type='text']);
+		By to = By.xpath("//div[contains(text(),'To')]");
+		By to2 = By.cssSelector("div[data-testid='to-testID-destination'] input[type='text']");
 		
-//		By from = By.xpath("//div[@data-testid='to-testID-origin']");
-//		By from = By.xpath("//input[@value='Delhi (DEL)']");
+		
 		
 	
 	public String getTitleLandingPage()
@@ -39,40 +43,33 @@ public class LandingPage {
 		System.out.println("Logged In Successfully");
 	}
 	
-	public void selectingDesiredLocation() throws InterruptedException {
+	public void selectingDesiredLocation(String fromCity, String toCity) throws InterruptedException {
 		
-		System.out.println("Clicking on From");
+// 			--------- Selecting From City  --------------   
 		
-		WebElement from = driver.findElement(By.xpath("//input[@value='Delhi (DEL)']"));
-		Actions actions = new Actions(driver);
-		actions.moveToElement(from).click().build().perform();
+		System.out.println("Clicking on From");		
+		WebElement fromBtn = driver.findElement(from);
+		//Using Action class to click on From Button
+		Actions action = new Actions(driver);
+		action.moveToElement(fromBtn).click().build().perform();
+		driver.findElement(from2).sendKeys(fromCity);	
+		System.out.println("Selected from city as: " + fromCity + " successfully");
 		
-//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-//		wait.until(ExpectedConditions.elementToBeClickable(from)).click();
+//			--------- Selecting To City  -------------- 
 		
-	//	driver.findElement(from).sendKeys("DBR");
+		System.out.println("Clicking on To");
+		WebElement toBtn = driver.findElement(to);
+		//Using Action class to click on From Button
+		Actions actionTo = new Actions(driver);
+		actionTo.moveToElement(toBtn).click().build().perform();
+		driver.findElement(to2).sendKeys(toCity);
+		System.out.println("Selected to city as: " + toCity + " successfully");
 		
-		
-//		driver.findElement(from1).click();
-//		driver.findElement(from2).click();		
-//		Actions actions = new Actions(driver);
-//		actions.moveToElement((WebElement) from).click().build().perform();		
-//		driver.findElement(from).sendKeys(From);
-		
-//		System.out.println("Clicked on From");
-//		
-//		System.out.println("Selecting To");
-//		driver.findElement(to).sendKeys("DBR");
-//		System.out.println("Selected To");
-		
-		System.out.println("Executed Selection of Location Successfully");
 	}
 	
 	public void selectingDate() {
-//		
-//		driver.findElement(calendar).click();
-//		driver.findElement(date).click();
-//		System.out.println("Selected Date");
+		System.out.println("Selecting Date");
+//		driver.findElement();
 	}
 	
 	public void searchingFlights() {
